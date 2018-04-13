@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block titulo %}
+		<title>GYM</title>
+	{% endblock %}
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+</head>
+<body>
+	{% block contenido %}
+		
+
+ 		<table border="5px">
+ 		<caption><h2>Gym</h2></caption> 
+ 			<thead>
+ 				<tr>
+ 					{% for i in listaG  %}
+ 					<th>{{ i }}</th>
+ 					<td><a href="{% url 'vista_ver_gym' id_prod=i.id %}">ver</a></td>
+ 					{% endfor %}
+ 				</tr>
+ 			</thead>
+ 		</table>
+ 	{% endblock %}
+
+ </body>
+ </html>

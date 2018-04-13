@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block titulo %}
+		<title>
+			ver ejercicio
+		</title>
+{% endblock %}
+<body>
+	{% block contenido %}
+	<h1>detalles</h1>
+	<form action="" method="POST" enctype="multipart/form-data">
+
+	<p><b> repeticiones:</b>  {{ E.repeticiones }}</p>
+	<p><b> series:</b>  {{ E.series }}</p>
+	
+		<span class="label label-info">{{ E.nombre }} </span>
+	
+	<br>
+	<br>
+	<a href="{% url 'vista_ejercicio' %}">regresar a la lista</a>
+		
+		
+		
+	</form>
+{% endblock %}
+</body>

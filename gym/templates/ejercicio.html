@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block titulo %}
+		<title>Ejercicio</title>
+	{% endblock %}
+	<lik rel="stylesheet" type="text/css" href="/statc/css/base.css">
+	
+</head>
+<body>
+
+	{% block contenido %}
+	
+
+	
+	<table border="5px">
+ 		<caption><h2>Ejercicios</h2></caption> 
+ 			<thead>
+ 				<tr>
+ 					<th>Nombre</th>
+ 					<th>Series</th>
+ 					<th>Repetiociones</th>
+ 					
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				
+ 					{% for ie in listaE  %}
+ 				<tr>
+ 					<td>{{ ie.nombre }}</td>
+ 					<td>{{ ie.series }}</td>
+ 					<td>{{ ie.repeticiones }}</td>
+ 					<td><a href="{% url 'vista_ver_ejercicio' id_prod=ie.id %}">ver</a></td>
+
+ 				</tr>
+					{% endfor %}
+
+ 			</tbody>
+ 		</table>
+ 		<a href="{% url 'vista_agregar_ejercicio' %}">Agregar</a>
+ 		{% endblock %}
+ 		
+ </body>
+ </html>

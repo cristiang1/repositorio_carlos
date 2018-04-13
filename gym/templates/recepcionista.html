@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block titulo %}
+		<title>Recepcionista</title>
+	{% endblock %}
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+</head>
+<body>
+
+	{% block contenido %}
+	
+
+ 			<table border="5px">
+ 		<caption><h2>Recepcionista</h2></caption> 
+ 			<thead>
+ 				<tr>
+ 					{% for i in listaR  %}
+ 					<th>{{ i }}</th>
+ 					<td><a href="{% url 'vista_ver_recepcionista' id_prod=i.id %}">ver</a></td>
+ 					{% endfor %}
+ 				</tr>
+ 			</thead>
+ 		</table>
+	{% endblock %}
+ </body>
+ </html>

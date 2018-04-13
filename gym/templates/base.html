@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+		<meta charset="utf-8">
+		{% block titulo %}
+		<title>
+			Base
+		</title>
+		{% endblock %}
+</head>
+<body>
+	<nav>
+		 <div id="menu">
+			<ul>
+
+
+			
+				<li id="uno">
+					<a href="{% url 'vista_horarios' %}">horarios</a>
+				</li>
+
+			
+
+				
+				<li id="dos">
+					<a href="{% url 'vista_usuario' %}">usuario</a>
+				</li>
+
+			
+
+					
+				<li id="tres">
+					<a href="{% url 'vista_ejercicio' %}">ejercicios</a>
+				</li>
+			
+
+			
+				<li id="cuatro">
+					<a href="{% url 'vista_recepcionista' %}">recepcionista</a>
+				</li>
+			
+
+				
+				<li id="cinco">
+					<a href="{% url 'vista_gym' %}">gym</a>
+				</li>
+			
+				<li id="seis">
+					<a href="{% url 'vista_register' %}">registro</a>
+				</li>
+
+				<li><a href="{% url 'vista_login' %}"><img src="/static/img/musculo.png" class="avatar"></a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+
+	{% block contenido %}
+	{% endblock %}
+	
+
+</body>
+</html>

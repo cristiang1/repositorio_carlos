@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+		<link rel="stylesheet" type="text/css" href="/static/css/registro.css">
+		<meta charset="utf-8">
+		{% block titulo %}
+		<title>
+			Base
+		</title>
+		{% endblock %}
+	{% block contenido %}
+	<h2>{{ msj }}</h2>
+	<form action="" method="POST" >
+	{% csrf_token %} 
+
+	{{formulario.as_p }}
+	<input class="btn" type="submit" name="registrarse" value="AZOPOTA MADRE">
+
+	<a href="{% url 'vista_gym' %}" id="regresar">Regresar a la lista</a>
+		
+		
+	<br>
+	<br>
+	</form>
+{% endblock %}
+</body>

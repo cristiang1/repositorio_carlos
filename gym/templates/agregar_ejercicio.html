@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %}
+		<title>
+			Agregar ejercicio
+		</title>
+{% endblock %}
+<body>
+	{% block contenido %}
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ formulario.as_p }}
+		<button type="submit">agregar</button>
+		
+	</form>
+	{% endblock %}
+</body>
+	

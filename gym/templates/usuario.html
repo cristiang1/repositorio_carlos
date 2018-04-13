@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block titulo %}
+		<title>Usuario</title>
+	{% endblock %}
+	<link rel="stylesheet" type="text/css" href="/static/css/mi_estilo.css">
+</head>
+<body>
+{% block contenido %}
+
+
+ 			<table border="5px">
+ 		<caption><h2>Usuario</h2></caption> 
+ 			<thead>
+ 				<tr>
+ 					{% for i in listar  %}
+ 					<th>{{ i }}</th><br>
+ 					<td><a href="{% url 'vista_ver_usuario' id_prod=i.id %}">ver</a></td>
+ 					<br>
+ 					{% endfor %}
+ 				</tr>
+ 			</thead>
+ 		</table>
+
+ 		<br>
+ 		<a href="{% url 'vista_agregar_usuaario' %}">Agregar</a>
+{% endblock %}
+	
+	</body>
+</html>
